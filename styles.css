@@ -1,0 +1,52 @@
+.site-header { /* styles the entire banner*/
+    background-color: #69A1D8; /* changes banner color */
+    color: #ffffff; /* changes text color inside of banner */
+    width: 100%; /* expands the banner to fit the page */
+    display: flex; /* arranges the header and nav link in a row instead of on top of each other */
+    gap: 10px; /* puts a gap between the heading and the nav links */
+    align-items: center; /* centers the text vertically */
+    flex-wrap: wrap; /* allows the text to wrap for smaller windows*/
+    font-family: Georgia, 'Times New Roman', Times, serif; /* changes font of text */
+}
+
+.site-title { /* styles the Bathroom Finder title*/
+    font-size: 40px; /* changes size of "bathroom finder" heading */
+    font-family:Arial, Helvetica, sans-serif; /* changes font of just bathroom finder title */
+    margin: 20px 30px; /* 20px top/bottom margin, 30px left/right margin */
+}
+
+.site-nav { /* styles the navigation links area */
+
+}
+
+.nav-link { /* styles the navigation links themselves*/
+    color: #ffffff; /* makes the nav links white text */
+    font-size: 25px; /* changes font size of the nav links */
+    margin: 0 50px; /* puts 30px of space between each nav link (first # is top/bottom margin, second is left/right margin) */
+}
+
+
+/* changes the layout for a smaller screen size */
+@media (max-width: 600px) {
+
+    .site-header {
+        flex-direction: column; /* puts the title and navigation on separate rows */
+        gap: 10px; /* puts space between the title and navigation */
+        text-align: center; /* centers the text */
+    }
+
+    .site-title {
+        font-size: 35px; /* makes the title smaller on mobile */
+        margin: 15px 0; /* removes the large left/right margin */
+    }
+
+    .site-nav {
+        display: flex; /* makes the navigation links a flexible layout */
+        flex-direction: column; /* puts each navigation link on its own line */
+        gap: 10px; /* puts space between each navigation link */
+    }
+
+    .nav-link {
+        margin: 0; /* removes the desktop margins on mobile */
+    }
+}
