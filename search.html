@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find a Bathroom</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+
+<body>
+
+        <header class="site-header">
+
+            <h1 class="site-title">Bathroom Finder</h1>
+
+            <nav class="site-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="search.html">Find a Bathroom</a>
+                <a class="nav-link" href="review.html">Review a Bathroom</a>
+                <a class="nav-link" href="about.html">About</a>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <h2>Find a Bathroom</h2>
+
+            <section class="add-bathroom">
+
+                <h2>Add a Bathroom Review</h2>
+
+                <form id="bathroom-form">
+
+                    <label for="address">Establishment Address:</label> <!-- maybe make entering address info more specific (street name, zip code, state, etc)-->
+                    <input type="text" id="address" required>
+
+                    <button type="button" id="check-address">Check Address</button>
+
+                    <p id="address-result"></p>
+
+                    <div id="existing-establishment"></div>
+
+                    <div id="new-establishment-fields">
+                        <label for="establishment-name">Establishment Name:</label>
+                        <input type="text" id="establishment-name" required>
+
+                        <label for="establishment-type">Establishment Type:</label>
+                        <select id="establishment-type" required>
+                        <option value="">Select a type</option>
+                        <option value="gas-station">Gas Station</option>
+                        <option value="convenience-store">Convenience Store</option>
+                        <option value="porta-potty">Porta Potty</option>
+                        <option value="fast-food">Fast Food Restaurant</option>
+                        <option value="sit-down">Sit-Down Restatuant</option>
+                        <option value="store">Store</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    </div>
+
+                    <label for="access">Bathroom Access:</label>
+                    <select id="access" required>
+                        <option value="">Select an option</option>
+                        <option value="none">No key or code required</option>
+                        <option value="key">Key required</option>
+                        <option value="code">Code required</option>
+                        <option value="purchase">Purchase required</option>
+                    </select>
+
+                    <label for="bathroom-type">Bathroom Type:</label>
+                    <select id="bathroom-type" required>
+                        <option value="">Select an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="family">Family</option>
+                    </select>
+
+                    <div class="rating">
+
+                        <label for="cleanliness">Cleanliness:</label>
+                        <select id="cleanliness" required>
+                            <option value="">Select a rating</option>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+
+                    </div>
+
+                    <div class="rating">
+
+                        <label for="stocked">Well Stocked:</label>
+                        <select id="stocked" required>
+                            <option value="">Select a rating</option>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+
+                    </div>
+
+                    <div class="rating">
+
+                        <label for="condition">Overall Condition:</label>
+                        <select id="condition" required>
+                            <option value="">Select a rating</option>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+
+                    </div>
+
+                    <div class="rating">
+
+                        <label for="accessibility">Accessibility:</label>
+                        <select id="accessibility" required>
+                            <option value="">Select a rating</option>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+
+                    </div>
+
+                    <div id="overall-rating">
+                        Overall Rating: Not rated yet
+                    </div>
+
+                    <button type="submit">Submit Review</button>
+
+                </form>
+
+            </section>
+
+            <div id="map"></div>
+
+        </main>
+
+        <!-- Leaflet's JavaScript -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <!-- Our JavaScript -->
+        <script src="app.js"></script>
+
+</body>
+
+</html>"
